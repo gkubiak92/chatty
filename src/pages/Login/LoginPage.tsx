@@ -26,7 +26,7 @@ const googleIcon = <BrandGoogle size={24} color='black' />;
 
 const LoginPage: React.FC = () => (
   <StyledLoginPage>
-    <AppLogo />
+    <AppLogo size={48} />
     <Styled.Button icon={googleIcon}>SignIn with Google</Styled.Button>
   </StyledLoginPage>
 );

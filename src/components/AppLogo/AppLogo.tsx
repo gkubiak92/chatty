@@ -1,18 +1,22 @@
 import React from 'react';
 import { MessageDots } from 'tabler-icons-react';
 import styled from 'styled-components';
+import constants from 'utils/constants';
+import { AppLogoProps } from './types';
 
-const StyledAppLogo = styled.div`
+const StyledAppLogo = styled.div<AppLogoProps>`
   display: flex;
+  justify-content: center;
+  align-items: center;
   h1 {
-    font-size: 48px;
+    font-size: ${({ size }) => size}px;
   }
 `;
 
-const AppLogo = () => (
-  <StyledAppLogo>
-    <MessageDots color='black' size={48} />
-    <h1>Chatty</h1>
+const AppLogo: React.FC<AppLogoProps> = ({ size }) => (
+  <StyledAppLogo size={size}>
+    <MessageDots color='black' size={size} />
+    <h1>{constants.APP_NAME}</h1>
   </StyledAppLogo>
 );
 
