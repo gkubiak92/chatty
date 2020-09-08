@@ -16,6 +16,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0",
+    "tabler-icons": "^1.19.0",
+    "tabler-icons-react": "^1.13.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
