@@ -2,10 +2,12 @@ import React from 'react';
 import { Styled } from 'components/Styled';
 import styled from 'styled-components';
 import { BrandGoogle } from 'tabler-icons-react';
+import AppLogo from 'components/AppLogo/AppLogo';
 
-const StyledLogin = styled.section`
+const StyledLoginPage = styled.section`
   width: 100%;
-  height: auto;
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,15 +15,20 @@ const StyledLogin = styled.section`
   header {
     margin-bottom: 48px;
   }
+
+  div:first-of-type {
+    position: absolute;
+    top: 32px;
+  }
 `;
 
 const googleIcon = <BrandGoogle size={24} color='black' />;
 
 const LoginPage: React.FC = () => (
-  <StyledLogin>
-    <header>Login</header>
+  <StyledLoginPage>
+    <AppLogo />
     <Styled.Button icon={googleIcon}>SignIn with Google</Styled.Button>
-  </StyledLogin>
+  </StyledLoginPage>
 );
 
 export default LoginPage;
