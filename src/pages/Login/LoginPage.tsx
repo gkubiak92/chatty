@@ -22,7 +22,7 @@ const StyledLoginPage = styled.section`
   }
 `;
 
-const googleIcon = <BrandGoogle size={24} color='black' />;
+const googleIcon = <BrandGoogle size={24} />;
 
 const LoginPage: React.FC = () => (
   <StyledLoginPage>

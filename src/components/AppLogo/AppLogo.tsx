@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageDots } from 'tabler-icons-react';
-import styled from 'styled-components';
+import { styled } from 'Theme';
 import constants from 'utils/constants';
 import { AppLogoProps } from './types';
 
@@ -10,6 +10,7 @@ const StyledAppLogo = styled.div<AppLogoProps>`
   align-items: center;
   h1 {
     font-size: ${({ size }) => size}px;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
