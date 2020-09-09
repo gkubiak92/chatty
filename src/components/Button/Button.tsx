@@ -18,10 +18,13 @@ const StyledButton = styled.button`
     background: ${({ theme }) => theme.colors.accent};
     color: ${({ theme }) => theme.colors.primary};
   }
+  svg {
+    margin-right: 12px;
+  }
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, icon }) => (
-  <StyledButton>
+const Button: React.FC<ButtonProps> = ({ children, icon, onClick }) => (
+  <StyledButton onClick={onClick}>
     {icon ? icon : null}
     {children}
   </StyledButton>
